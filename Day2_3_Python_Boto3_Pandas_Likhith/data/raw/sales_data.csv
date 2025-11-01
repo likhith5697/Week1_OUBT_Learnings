@@ -1,0 +1,11 @@
+orderId,Customer,Product,Quantity,Price
+101,Likhith,Laptop,1,800
+102,Sasank,Mobile,2,500
+103,Prathyush,Tablet,1,300
+104,Anushka,Laptop,1,800
+105,Sasank,Tablet,3,300
+106,Likhith,Mobile,2,500
+107,Prathyush,Laptop,1,800
+108,Anushka,Tablet,2,300
+109,Likhith,Mobile,1,800
+110,Sasank,Laptop,1,500

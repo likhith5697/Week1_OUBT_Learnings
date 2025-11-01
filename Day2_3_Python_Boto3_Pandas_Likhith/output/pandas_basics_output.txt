@@ -1,0 +1,100 @@
+OUBT Week 1 - Day 2-3: Python for Data Engineering
+Topic: Pandas for Data Manipulation
+
+Sales Data:    orderId   Customer Product  Quantity  Price
+0      101    Likhith  Laptop         1    800
+1      102     Sasank  Mobile         2    500
+2      103  Prathyush  Tablet         1    300
+3      104    Anushka  Laptop         1    800
+4      105     Sasank  Tablet         3    300
+5      106    Likhith  Mobile         2    500
+6      107  Prathyush  Laptop         1    800
+7      108    Anushka  Tablet         2    300
+8      109    Likhith  Mobile         1    800
+9      110     Sasank  Laptop         1    500
+
+Created sample sales_data.csv
+
+Data read from csv:   orderId   Customer Product  Quantity  Price
+0      101    Likhith  Laptop         1    800
+1      102     Sasank  Mobile         2    500
+2      103  Prathyush  Tablet         1    300
+3      104    Anushka  Laptop         1    800
+4      105     Sasank  Tablet         3    300
+5      106    Likhith  Mobile         2    500
+6      107  Prathyush  Laptop         1    800
+7      108    Anushka  Tablet         2    300
+8      109    Likhith  Mobile         1    800
+9      110     Sasank  Laptop         1    500 
+
+   orderId   Customer Product  Quantity  Price
+0      101    Likhith  Laptop         1    800
+1      102     Sasank  Mobile         2    500
+2      103  Prathyush  Tablet         1    300
+3      104    Anushka  Laptop         1    800
+4      105     Sasank  Tablet         3    300
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 10 entries, 0 to 9
+Data columns (total 5 columns):
+ #   Column    Non-Null Count  Dtype 
+---  ------    --------------  ----- 
+ 0   orderId   10 non-null     int64 
+ 1   Customer  10 non-null     object
+ 2   Product   10 non-null     object
+ 3   Quantity  10 non-null     int64 
+ 4   Price     10 non-null     int64 
+dtypes: int64(3), object(2)
+memory usage: 532.0+ bytes
+None
+
+ Summary Statistics:
+         orderId   Quantity       Price
+count   10.00000  10.000000   10.000000
+mean   105.50000   1.500000  560.000000
+std      3.02765   0.707107  222.111083
+min    101.00000   1.000000  300.000000
+25%    103.25000   1.000000  350.000000
+50%    105.50000   1.000000  500.000000
+75%    107.75000   2.000000  800.000000
+max    110.00000   3.000000  800.000000 
+
+ Data cleaning : 
+Duplicate rows before the data cleaning are: 0
+Duplicate rows before the data cleaning are: 0
+I have added total column after calculating
+   orderId   Customer Product  Quantity  Price  total
+0      101    Likhith  Laptop         1    800    800
+1      102     Sasank  Mobile         2    500   1000
+2      103  Prathyush  Tablet         1    300    300
+3      104    Anushka  Laptop         1    800    800
+4      105     Sasank  Tablet         3    300    900 
+
+Total Revenue per customer:
+Customer
+Anushka      1400
+Likhith      2600
+Prathyush    1100
+Sasank       2400
+Name: total, dtype: int64 
+
+Total Quantity per Product:
+Product
+Laptop    4
+Mobile    5
+Tablet    6
+Name: Quantity, dtype: int64 
+
+Invoice Data : 
+[{'InvoiceId': 'I101', 'Customer': 'Likhith'}, {'InvoiceId': 'I102', 'Customer': 'Sasank'}] 
+
+Merged Sales and Invoice Data:
+   orderId   Customer Product  Quantity  Price  total InvoiceId
+0      101    Likhith  Laptop         1    800    800      I101
+1      102     Sasank  Mobile         2    500   1000      I102
+2      103  Prathyush  Tablet         1    300    300       NaN
+3      104    Anushka  Laptop         1    800    800       NaN
+4      105     Sasank  Tablet         3    300    900      I102 
+
+Cleaned data saved to data/processed/cleaned_sales_data.csv
+
+Day 2–3 Pandas Practice Completed Successfully!

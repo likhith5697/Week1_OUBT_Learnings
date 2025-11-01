@@ -1,0 +1,25 @@
+Created local file: data/raw/local_sales.csv
+
+Error creating bucket: An error occurred (IllegalLocationConstraintException) when calling the CreateBucket operation: The unspecified location constraint is incompatible for the region specific endpoint this request was sent to.
+Uploaded data/raw/local_sales.csv to s3://likhith-week1-demo/sales/local_sales.csv
+
+ Files in S3 bucket:
+  . Likhith_Venkata_Data_Engineer_Resume.pdf
+  . sales/local_sales.csv
+
+ Downloaded file is in data/s3_upload/sales_downloaded.csv
+
+ Data Loaded Back from S3:
+   OrderId Customer  Amount
+0        1  Likhith     120
+1        2   Sasank     160
+2        3     Siva     280 
+
+After doing Tax calculation: 
+   OrderId Customer  Amount   Tax  TotalWithTax
+0        1  Likhith     120  12.0         132.0
+1        2   Sasank     160  16.0         176.0
+2        3     Siva     280  28.0         308.0 
+
+Final data saved locally in data/s3_upload/sales_with_tax.csv
+Uploaded final version to  s3://likhith-week1-demo/sales/sales_with_tax.csv
